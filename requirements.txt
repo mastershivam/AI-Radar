@@ -1,0 +1,3 @@
+praw
+google-cloud-storage
+google-cloud-secret-manager
