@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Initialize Vertex AI
 PROJECT_ID = os.environ.get("PROJECT_ID")
-REGION = os.environ.get("REGION", "europe-west1")
+REGION = os.environ.get("REGION", "us-central1")
 aiplatform.init(project=PROJECT_ID, location=REGION)
 
 # Model settings
