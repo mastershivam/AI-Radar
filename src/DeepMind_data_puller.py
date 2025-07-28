@@ -4,11 +4,11 @@ from pathlib import Path
 from langchain_ollama import ChatOllama
 from PreventDuplicateSummaries import is_url_in_file
 
-def OpenAI_BlogPost_Puller(prompt_input):
-    rss_url = "https://openai.com/news/rss.xml"
+def DeepMind_BlogPost_Puller(prompt_input):
+    rss_url = "https://deepmind.com/blog/feed/basic"
     feed = feedparser.parse(rss_url)
 
-    output_path = Path("Markdown_Summaries/openai_rss_summary.md")
+    output_path = Path("Markdown_Summaries/deepmind_rss_summary.md")
     new_summaries = 0
 
     for item in feed.entries:
@@ -33,5 +33,4 @@ def OpenAI_BlogPost_Puller(prompt_input):
         new_summaries += 1
         print(f"Added summary for: {url}")
 
-    print(f"Saved {new_summaries} new summaries to {output_path}")
-
+    print(f"Saved {new_summaries} new summaries to {output_path}") 

@@ -1,36 +1,38 @@
 import feedparser
-from datetime import datetime, timezone,date
+from datetime import datetime, timezone
 from langchain_ollama import ChatOllama
+from PreventDuplicateSummaries import is_url_in_file
 
-def HuggingFace_BlogPost_Puller(prompt_input,date_to_filter=date.today()):
+def HuggingFace_BlogPost_Puller(prompt_input):
     rss_url = "https://huggingface.co/blog/feed.xml"
     feed = feedparser.parse(rss_url)
 
-    for i,item in enumerate(feed.entries,1):
-        # Prefer link but fallback to guid
+    output_path = "Markdown_Summaries/hugging_faces_summary.md"
+    new_summaries = 0
+
+    for item in feed.entries:
         url = item.get("link") or item.get("guid")
-        
-        prompt=prompt_input
-        # Parse published date
-        date = datetime(*item.published_parsed[:6], tzinfo=timezone.utc).date()
-        
+        title = item.title
+        published_date = datetime(*item.published_parsed[:6], tzinfo=timezone.utc).date()
 
-        if date == date_to_filter:
-            prompt += f"   Title: {item.title}\n"
-            prompt += f"   URL: {url}\n"
-        
-            llm = ChatOllama(model="mistral:latest")
-            summary = llm.invoke(prompt)
-            summary.content   
+        if is_url_in_file(url, output_path):
+            print(f"Skipped duplicate: {url}")
+            continue
 
+        prompt = prompt_input + f"Title: {title}\nURL: {url}\n"
+        llm = ChatOllama(model="mistral:latest")
+        summary = llm.invoke(prompt).content
 
-            with open(f"Markdown_Summaries/hugging_faces_summary.md","a") as f:
-                f.write('\n\n---\n\n')
-                f.write(f'Blog Post Title: {item.title}\n')
-                f.write(f'Date Published: {date}\n')
-                f.write(f'URL: {url}\n')
-                f.write(summary.content)
-                print('Article written to HuggingFace file')
+        with open(output_path, "a") as f:
+            f.write('\n\n---\n\n')
+            f.write(f'Blog Post Title: {title}\n')
+            f.write(f'Date Published: {published_date}\n')
+            f.write(f'URL: {url}\n')
+            f.write(summary)
+        new_summaries += 1
+        print(f"Article written to HuggingFace file: {url}")
+
+    print(f"Saved {new_summaries} new summaries to {output_path}")
 
         
  

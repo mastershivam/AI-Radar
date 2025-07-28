@@ -4,14 +4,16 @@ from pathlib import Path
 from langchain_ollama import ChatOllama
 from PreventDuplicateSummaries import is_url_in_file
 
-def OpenAI_BlogPost_Puller(prompt_input):
-    rss_url = "https://openai.com/news/rss.xml"
+def MetaAI_BlogPost_Puller(prompt_input):
+    rss_url = "https://rsshub.app/meta/ai/blog"
     feed = feedparser.parse(rss_url)
 
-    output_path = Path("Markdown_Summaries/openai_rss_summary.md")
+    output_path = Path("Markdown_Summaries/metaai_rss_summary.md")
     new_summaries = 0
-
+    print(feed)
     for item in feed.entries:
+        print(item)
+        
         url = item.get("link") or item.get("guid")
         title = item.title
         published_date = datetime(*item.published_parsed[:6], tzinfo=timezone.utc).date()
@@ -33,5 +35,7 @@ def OpenAI_BlogPost_Puller(prompt_input):
         new_summaries += 1
         print(f"Added summary for: {url}")
 
-    print(f"Saved {new_summaries} new summaries to {output_path}")
+    print(f"Saved {new_summaries} new summaries to {output_path}") 
+prompt = f"Access the link provided, summarise the blog post, and return a summary of the blog post in a couple of lines.\n"
 
+MetaAI_BlogPost_Puller(prompt)
