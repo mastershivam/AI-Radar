@@ -262,11 +262,5 @@ python src/daily_newsletter_workflow.py
 3. Add your changes
 4. Submit a pull request
 
-## License
 
-[Add your license information here]
-
-## Contact
-
-[Add your contact information here]
 
