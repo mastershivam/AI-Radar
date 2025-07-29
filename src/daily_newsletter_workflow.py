@@ -89,7 +89,7 @@ def run_daily_workflow(send_email=True):
             
             sender.send_newsletter_from_file(
                 to_emails=recipients,
-                subject=f"🤖 AI Radar Daily - {today.strftime('%B %d, %Y')}",
+                subject=f"Your Daily Big Tech AI Digest - {today.strftime('%B %d, %Y')}",
                 html_file_path=newsletter_file
             )
             print("✅ Newsletter sent successfully!")
