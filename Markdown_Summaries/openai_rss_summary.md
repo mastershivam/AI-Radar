@@ -4615,3 +4615,11 @@ Date Published: 2016-02-25
 URL: https://openai.com/index/weight-normalization
 
  The blog post discusses a technique called weight normalization, a simple reparameterization used to improve the training of deep neural networks. It explains that traditional methods like Batch Normalization can sometimes be computationally expensive and may not work well in certain situations. Weight normalization addresses these issues by normalizing weights during each forward pass, rather than during training. This leads to faster convergence, reduced memory requirements, and improved performance on some tasks compared to traditional normalization techniques.
+
+---
+
+Blog Post Title: Introducing study mode in ChatGPT
+Date Published: 2025-07-29
+URL: https://openai.com/index/chatgpt-study-mode
+
+ The blog post introduces Study Mode in ChatGPT, a new feature designed to help students learn and prepare for exams more effectively. Study Mode offers a distraction-free environment with a focus on educational content, provides references for cited information, and maintains historical conversations for easier review of past discussions. This feature is intended to streamline the learning process and make it easier for students to access accurate and reliable information.

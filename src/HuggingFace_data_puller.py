@@ -7,7 +7,7 @@ def HuggingFace_BlogPost_Puller(prompt_input):
     rss_url = "https://huggingface.co/blog/feed.xml"
     feed = feedparser.parse(rss_url)
 
-    output_path = "Markdown_Summaries/hugging_faces_summary.md"
+    output_path = "Markdown_Summaries/hugging_faces_rss_summary.md"
     new_summaries = 0
 
     for item in feed.entries:

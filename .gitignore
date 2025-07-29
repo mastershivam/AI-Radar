@@ -3,3 +3,5 @@ venv/
 
 google-cloud-sdk/
 *.log
+src/.env
+Markdown_Summaries/

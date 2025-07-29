@@ -3,3 +3,12 @@ venv/
 google-cloud-sdk/
 *.log
 .gloudignore
+src/.env
+
+venv/
+.venv/
+
+google-cloud-sdk/
+*.log
+src/.env
+Markdown_Summaries/

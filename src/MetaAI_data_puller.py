@@ -10,9 +10,9 @@ def MetaAI_BlogPost_Puller(prompt_input):
 
     output_path = Path("Markdown_Summaries/metaai_rss_summary.md")
     new_summaries = 0
-    print(feed)
+    
     for item in feed.entries:
-        print(item)
+        
         
         url = item.get("link") or item.get("guid")
         title = item.title
@@ -36,6 +36,3 @@ def MetaAI_BlogPost_Puller(prompt_input):
         print(f"Added summary for: {url}")
 
     print(f"Saved {new_summaries} new summaries to {output_path}") 
-prompt = f"Access the link provided, summarise the blog post, and return a summary of the blog post in a couple of lines.\n"
-
-MetaAI_BlogPost_Puller(prompt)
