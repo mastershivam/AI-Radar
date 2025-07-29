@@ -40,7 +40,7 @@ def generate_newsletter_html(summary_file_path, date_str=None):
         body {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #000000;
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
@@ -53,15 +53,15 @@ def generate_newsletter_html(summary_file_path, date_str=None):
             overflow: hidden;
         }}
         .header {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(90deg,rgba(75, 4, 110, 1) 0%, rgba(11, 44, 69, 1) 50%, rgba(20, 74, 40, 1) 100%);
             color: white;
             padding: 30px 20px;
             text-align: center;
         }}
         .header h1 {{
             margin: 0;
-            font-size: 28px;
-            font-weight: 300;
+            font-size: 42px;
+            font-weight: 600;
         }}
         .header .date {{
             margin-top: 10px;
@@ -69,19 +69,23 @@ def generate_newsletter_html(summary_file_path, date_str=None):
             font-size: 16px;
         }}
         .content {{
-            padding: 30px 20px;
+            padding: 15px 20px;
         }}
         .content h1 {{
-            color: #2c3e50;
+            color: #000000;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
             margin-top: 30px;
             margin-bottom: 20px;
         }}
         .content h2 {{
-            color: #34495e;
+            color: #000000;
             margin-top: 25px;
             margin-bottom: 15px;
+        }}
+        .content p {{
+            color: #000000; 
+            margin-bottom: 10px;
         }}
         .article {{
             margin-bottom: 25px;
@@ -92,16 +96,16 @@ def generate_newsletter_html(summary_file_path, date_str=None):
         }}
         .article-title {{
             font-weight: bold;
-            color: #2c3e50;
+            color: #000000;
             margin-bottom: 8px;
         }}
         .article-date {{
-            color: #7f8c8d;
+            color: #000000;
             font-size: 14px;
             margin-bottom: 8px;
         }}
         .article-url {{
-            color: #3498db;
+            color: #3498db;  /* Change back to blue */
             text-decoration: none;
             font-size: 14px;
         }}
@@ -141,7 +145,7 @@ def generate_newsletter_html(summary_file_path, date_str=None):
 <body>
     <div class="newsletter-container">
         <div class="header">
-            <h1>🤖 AI Radar Daily</h1>
+            <h1> Daily AI Digest</h1>
             <div class="date">{date_str}</div>
         </div>
         
@@ -150,8 +154,8 @@ def generate_newsletter_html(summary_file_path, date_str=None):
         </div>
         
         <div class="footer">
-            <p>📧 This newsletter is automatically generated from AI company blog feeds.</p>
-            <p>🔗 <a href="https://github.com/mastershivam/ai-radar">View on GitHub</a> | 
+            <p>📧 This newsletter is automatically generated from Company Blog Feeds.</p>
+            <p>🔗 <a href="https://github.com/mastershivam/ai-radar">View on GitHub</a>  
                
         </div>
     </div>
@@ -181,7 +185,7 @@ def create_newsletter_from_summary(summary_file_path, date_str=None):
     if date_str is None:
         date_str = datetime.now().strftime("%Y-%m-%d")
     
-    output_path = f"newsletter_{date_str}.html"
+    output_path = f"Newsletters/newsletter_{date_str}.html"
     save_newsletter_html(html_content, output_path)
     
     return output_path

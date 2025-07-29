@@ -26,9 +26,9 @@ def Anthropic_BlogPost_Puller(prompt_input):
 
         with open(output_path, "a") as f:
             f.write("\n\n---\n\n")
-            f.write(f"Blog Post Title: {title}\n")
-            f.write(f"Date Published: {published_date}\n")
-            f.write(f"URL: {url}\n\n")
+            f.write(f"**Blog Post Title: {title}**<br>\n")
+            f.write(f"Date Published: {published_date}<br>\n")
+            f.write(f"URL: {url}<br>\n\n")
             f.write(summary)
         new_summaries += 1
         print(f"Added summary for: {url}")

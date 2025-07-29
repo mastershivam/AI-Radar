@@ -53,7 +53,7 @@ def aggregate_summaries(target_date=None):
     else:
         target_date = str(target_date)
     
-    output_file = f'daily_summary_{target_date}.md'
+    output_file = f'DailySummaries/daily_summary_{target_date}.md'
     
     with open(output_file, 'w') as out:
         for src in sources:
@@ -67,7 +67,15 @@ def aggregate_summaries(target_date=None):
                         a for a in articles if f'Date Published: {target_date}' in a
                     ]
                     if todays_articles:
-                        out.write(f"# {src.split('/')[-1].replace('_rss_summary.md', '').capitalize()}\n")
+                        # Extract the source name and format it nicely (e.g., "hugging_faces" -> "Hugging Faces", "openai" -> "OpenAI", "deepmind" -> "Google DeepMind")
+                        src_name = src.split('/')[-1].replace('_rss_summary.md', '').replace('_summary.md', '').replace('_', ' ')
+                        src_name = ' '.join([word.capitalize() for word in src_name.split()])
+                        # Special cases
+                        if src_name.lower() == "openai":
+                            src_name = "OpenAI"
+                        elif src_name.lower() == "deepmind":
+                            src_name = "Google DeepMind"
+                        out.write(f"# {src_name}\n")
                         out.write('\n\n---\n\n'.join(todays_articles))
                         out.write('\n\n')
             except FileNotFoundError:
