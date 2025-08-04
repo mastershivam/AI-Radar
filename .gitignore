@@ -7,3 +7,5 @@ src/.env
 Markdown_Summaries/
 DailySummaries/
 Newsletters/
+Markdown_Summaries/deepmind_rss_summary.md
+Markdown_Summaries/openai_rss_summary.md

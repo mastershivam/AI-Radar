@@ -799,3 +799,19 @@ Date Published: 2022-12-06
 URL: https://deepmind.google/discover/blog/ai-for-the-board-game-diplomacy/
 
  The blog post titled "AI for the board game Diplomacy" discusses DeepMind's development of an artificial intelligence (AI) model named AlphaDiplomacy, designed to master the complex and social strategy game Diplomacy. AlphaDiplomacy combines deep reinforcement learning with a dialogue system to enable effective negotiations with other AI players, marking a significant advancement in AI's ability to engage in human-like interactions while playing strategic board games. The goal is to create an AI opponent that can provide challenging and compelling gameplay for Diplomacy enthusiasts.
+
+---
+
+**Blog Post Title: Try Deep Think in the Gemini app**<br>
+Date Published: 2025-08-01<br>
+URL: https://deepmind.google/discover/blog/try-deep-think-in-the-gemini-app/<br>
+
+ The blog post titled "Try DeepMind's 'Deep Think' in the Gemini app" discusses the integration of a new feature named 'Deep Think', developed by Google's AI research company, DeepMind, into the Gemini cryptocurrency platform. This feature is designed to optimize crypto trading strategies by utilizing advanced artificial intelligence algorithms that predict market trends and suggest optimal trade times. The blog encourages users to try out this feature for a more intelligent approach to their crypto investments within the Gemini app.
+
+---
+
+**Blog Post Title: AlphaEarth Foundations helps map our planet in unprecedented detail**<br>
+Date Published: 2025-07-30<br>
+URL: https://deepmind.google/discover/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/<br>
+
+ The blog post discusses AlphaEarth Foundations, a project initiated by DeepMind, Alphabet's AI company, to map the Earth in unprecedented detail. This initiative aims to create an open-source digital twin of our planet at a resolution never before achieved, using AI and satellite data. The goal is to provide valuable resources for researchers, climate scientists, and policymakers to make informed decisions about the environment and sustainability.

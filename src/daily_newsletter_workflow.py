@@ -56,6 +56,11 @@ def run_daily_workflow(send_email=True):
     # Step 3: Generate HTML newsletter
     print("\n📧 Step 3: Generating HTML newsletter...")
     try:
+        # Check if the summary file is empty
+        if os.path.getsize(summary_file) == 0:
+            print("❌ Error: The summary file is empty. No newsletter will be generated or sent.")
+            return
+
         newsletter_file = create_newsletter_from_summary(summary_file, today.strftime("%B %d, %Y"))
         print(f"✅ Newsletter generated: {newsletter_file}")
         

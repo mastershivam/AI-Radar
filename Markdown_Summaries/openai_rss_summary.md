@@ -4625,3 +4625,27 @@ Date Published: 2025-07-29<br>
 URL: https://openai.com/index/chatgpt-study-mode<br>
 
  The blog post introduces Study Mode, a new feature for ChatGPT, designed to provide students with a more focused and efficient learning experience. Study Mode enhances the utility of ChatGPT by suppressing casual and off-topic conversations, thereby encouraging productive discussions related to academic subjects. This update is aimed at assisting students in structuring their study sessions and improving their learning outcomes.
+
+---
+
+**Blog Post Title: Figma uses AI to transform digital design**<br>
+Date Published: 2025-08-01<br>
+URL: https://openai.com/index/figma-david-kossnick<br>
+
+ The blog post discusses Figma's integration of artificial intelligence (AI) to revolutionize digital design. Figma, a popular online graphic design tool, has partnered with a company called DeepArt AI to implement AI features in its platform. This partnership aims to simplify the design process by offering tools such as auto-layout, automatic style application, and AI-generated assets. The goal is to save designers time and streamline their workflow, making Figma more efficient and accessible for various design tasks.
+
+---
+
+**Blog Post Title: Introducing Stargate Norway**<br>
+Date Published: 2025-07-31<br>
+URL: https://openai.com/index/introducing-stargate-norway<br>
+
+ The blog post introduces Stargate Norway, a new addition to the OpenAI family that focuses on developing and deploying large language models. It emphasizes Stargate's commitment to responsible AI and its potential to contribute significantly to the advancement of artificial intelligence research in Europe. The post also highlights the collaboration between Stargate Norway and the Norwegian government to foster innovation and promote ethical AI practices.
+
+---
+
+**Blog Post Title: Three lessons for creating a sustainable AI advantage**<br>
+Date Published: 2025-07-30<br>
+URL: https://openai.com/index/intercom<br>
+
+ The blog post titled "Three Lessons for Creating a Sustainable AI Advantage" discusses key strategies for organizations to leverage Artificial Intelligence (AI) in a way that provides long-term competitive advantages while avoiding potential risks and ethical issues. The three main lessons emphasize the importance of: 1) building AI capabilities as an integrated part of overall business strategy, 2) prioritizing responsible AI development and deployment by considering ethical implications and addressing biases, and 3) fostering a culture of collaboration with other organizations to share knowledge and best practices in AI.
